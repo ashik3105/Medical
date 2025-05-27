@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calucation</title>
+</head>
+<body>
+    <style>
+   body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.calculator {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  width: 320px;
+}
+
+.display {
+  height: 50px;
+  background-color: #222;
+  color: #0f0;
+  font-size: 2rem;
+  text-align: right;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  overflow-x: auto;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #e0e0e0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #ccc;
+}
+
+button.operator {
+  background-color: #ff9500;
+  color: white;
+}
+
+button.operator:hover {
+  background-color: #e08900;
+}
+
+button.equal {
+  background-color: #28a745;
+  color: white;
+  grid-column: span 2;
+}
+
+button.equal:hover {
+  background-color: #218838;
+}
+
+button.clear {
+  background-color: #dc3545;
+  color: white;
+}
+
+button.clear:hover {
+  background-color: #c82333;
+}
+</style>
+
+    <div class="calculator">
+     <input type="text" class="display" id="display">
+     <div class="buttons">
+        <button onclick="press('7')">7</button>
+        <button onclick="press('8')">8</button>
+        <button onclick="press('9')">9</button>
+        <button class="opertion" onclick="press('/')">/</button>
+
+        <button onclick="press('4')">4</button>
+        <button onclick="press('5')">5</button>
+        <button onclick="press('6')">6</button>
+        <button class="operator" onclick="press('*')">*</button>
+
+        <button onclick="press('1')">1</button>
+        <button onclick="press('2')">2</button>
+        <button onclick="press('3')">3</button>
+        <button class="operator" onclick="press('-')">-</button>
+
+        <button onclick="press('0')">0</button>
+        <button onclick="press('.')">.</button>
+        <button class="equals" onclick="calculate()">=</button>
+        <button class="operator" onclick="press('+')">+</button>
+
+        <button class="clear" onclick="clearDisplay()">C</button>
+        </div>
+    </div>
+    
+    <script>
+        function press(value){
+            document.getElementById('display').value +=value;
+        }
+
+        function calculate(){
+            var display=document.getElementById('display');
+        
+
+        try {
+            display.value = eval(display.value);
+        } catch {
+            display.value = "Error";
+        }
+        }
+        
+        function clearDisplay(){
+            document.getElementById('display').value = "";
+        }
+
+    </script>
+</body>
+</html>

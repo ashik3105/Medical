@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    line-height: 2.6;
+    color: black;
+    background-color: white;
+}
+
+.SUNTECH DEVICES{
+    /* width: 100;
+    max-width: 1500px;
+    margin: auto;
+    padding: 60px; */
+}
+
+/*header*/
+.header{
+    color: blue;
+    padding: 80px;
+    text-align: center;
+    font-size: 30px;
+    background-image: url(front\ page.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/*navbar*/
+.navbar{
+    background-color: burlywood;
+}
+
+.navbar ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.navbar li{
+    margin: 20px;
+} 
+
+.navbar a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    display: block;
+    transition: background 0.5s;
+}
+
+.navbar a:hover{
+    background-color: rgb(93, 127, 23);
+    border-radius: 50px;
+}
+
+
+
+
+/*Section*/
+.section{
+    padding: 15px;
+    background-color: white;
+    border-bottom: whitesmoke;
+    color: darkcyan;
+}
+
+.section:nth-child(even) {
+    background-color: lightgrey;
+}
+
+.section:nth-child(odd) {
+    background-color: lightblue;
+}
+
+.section h2{
+    margin-bottom: 15px;
+    color: black;
+}
+
+/*footer*/
+footer{
+    background-color: black;
+    color: wheat;
+    padding: 25px;
+    text-align: center;
+}
+
+
+
